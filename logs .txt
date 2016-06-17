@@ -1,0 +1,43 @@
+LOGS
+--names--
+workilinks.com
+graduateeasy.com
+
+
+
+-- Basic log system is working
+-- basic register working--
+ need to create for for other information (uplaod cv blah blah)
+ 
+ ---- create profile progression bar, 
+ basic sign-up = 10%
+ Job Tags = 10%
+ linked in = 10%
+ upload cv = 20%
+ information = 50%
+
+------------Sign in with 3rd party applications
+Linked in --- have to be accepted and have a live URL
+Google ---
+client ID 751235139565-f09p8tqqj4j2k67c35vm3pacrk5iuvj8.apps.googleusercontent.com
+Client secret IvMcj8Xnh8HG0alEEAsrs6Y0
+Facebook ---- 
+
+With have 3 login systems --- which profile picture would they like to use?
+
+
+
+------------- recruiter side -----------
+Looking for dandidates ---- in-depth search
+medium size section for each candidate 
+with their skills, pref jobs, pref location, view profile button, imgae, any exsperiance
+graduate date 
+
+---------filters---------
+skills, job title - pref jobs, Already graduated
+
+
+------footer-------
+Slide up and down on user pages (Show/hide footer to a small one)
+
+
