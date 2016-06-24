@@ -23,9 +23,30 @@ signup_date varchar(50) NOT NULL,
 account_progress varchar(3),
 PRIMARY KEY (user_id)
 )
-ALTER TABLE users
-ADD account_progress varchar(3);
-ALTER TABLE users
-ADD portfolio_url varchar(255);
+create table saved_jobs(
+S_ID int NOT NULL AUTO_INCREMENT,
+email varchar(150),
+saved_job varchar(3),
+PRIMARY KEY (S_ID)
+);
+create table posts(
+P_ID int NOT NULL AUTO_INCREMENT,
+post_type varchar(50),
+job_title varchar(255),
+salary varchar(5),
+hours varchar(20),
+details varchar(10000),
+recruiters varchar(255),
+time_date_start varchar(50),
+time_date_end varchar(50),
+location varchar(200),
+PRIMARY key (P_ID)
+);
 
+company
+
+
+
+
+insert into posts (post_type,job_title,salary,hours,details,recruiters,time_date_start,time_date_end,location) VALUES ('part_time','software dev','20000','Full-time','dets','recruiters three','23-23-32','23323','Manchester')
 insert into users (title,FirstName,LastName,Email,Password,signup_date) VALUES ('$title','$fn','$ln','$e','blah','blah')

@@ -13,6 +13,7 @@
         <meta name="keyword" content="html, css, bootstrap, job-board">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -57,11 +58,11 @@
 						echo'
 						
 						<div class="dropdown">
-						  <a href="account.php"><button class="navbar-btn nav-button login" >Account</button></a>
+						  <a href="profile.php"><button class="navbar-btn nav-button login" >Account</button></a>
 						  <div class="dropdown-content">
-							<a href="#">My Account</a>
+							<a href="profile.php">My Account</a>
 							<a href="#">uplaod Cv</a>
-							<a href="#">Saved Jobs</a>
+							<a href="savedjobs.php">Saved Jobs</a>
 						  </div>
 						</div>
 

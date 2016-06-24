@@ -33,7 +33,7 @@ require 'connect.php';
 			<input type="submit" value="Register"></p>
 		</form>
 </section>
-
+blahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 </body>
 </html>
 

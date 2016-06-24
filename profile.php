@@ -43,13 +43,6 @@
           </div>
           <div class="col-sm-4">
             <div class="row mgbt-xs-0 margin-top">
-              <label class="col-xs-5 control-label">User Name:</label>
-              <div class="col-xs-7 controls">Mariah</div>
-              <!-- col-sm-10 --> 
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="row mgbt-xs-0 margin-top">
               <label class="col-xs-5 control-label">Email:</label>
               <div class="col-xs-7 controls">mariah@Vendroid.com</div>
               <!-- col-sm-10 --> 
@@ -90,7 +83,7 @@
               <!-- col-sm-10 --> 
             </div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-5">
             <div class="row mgbt-xs-0 margin-top">
               <label class="col-xs-5 control-label">Phone:</label>
               <div class="col-xs-7 controls">+1-234-5678</div>
