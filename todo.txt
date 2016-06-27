@@ -1,0 +1,17 @@
+// ---------- INDEX ---------- //
+
+Take Slide show out - Web Devel is past that(they mess with usability)
+Postcode/town search - with map maybe
+Context
+Animation
+Login / Sign Up Windows need styling
+Logo
+
+// ---------- PROFILE ---------- //
+
+
+// ---------- SIGN IN ---------- //
+// ---------- REGISTER ---------- //
+// ---------- FOOTER ---------- //
+// ----------  ---------- //
+// ----------  ---------- //

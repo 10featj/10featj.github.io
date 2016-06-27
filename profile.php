@@ -12,16 +12,18 @@
 		});
 	});
 	$(document).ready(function () {
-	                $(document).on('mouseenter', '#profile_header', function () {
-	                    $(this).find(":button").show();
-	                }).on('mouseleave', '#profile_header', function () {
-	                    $(this).find(":button").hide();
+	                $(document).on('mouseenter', '#test', function () {
+	                    $(this).find(".editbutton").show();
+	                }).on('mouseleave', '#test', function () {
+	                    $(this).find(".editbutton").hide();
 	                });
 	            });
 	</script>
     <!-- Page Content -->
 	<div class="back">
     <div class="container back">
+			<div id="test">
+				<button type="button" class="editbutton" style="display: none;"></button>
 		<?php
 		if ($_GET['id'] == $_SESSION['userid']){
 			$ownAccount = 'True';
@@ -33,7 +35,7 @@
 
 		<div class="row" id="profile_header">
 
-   <button type="button" class="editbutton" style="display: none;"></button>
+
 
             <div class="col-md-">
 					<figure class="snip1344"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample1.jpg" alt="profile-sample1" class="background"/><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample1.jpg" alt="profile-sample1" class="profile"/>
@@ -109,22 +111,24 @@
 
         </div>
 			</div>
-
+		</div>
 
         <!-- /.row -->
 
+
         <!-- skill + education -->
         <div class="row">
-            <div class="col-sm-5 portfolio-item" id="profile_sections">
+          <div class="col-md-5 portfolio-item" id="profile_sections">
+						<div id="test">
 							<button type="button" class="editbutton" style="display: none;"></button>
-                <h3>
+								<h3>
                     Education Information
                 </h3>
 							<?php if (!$row['CurrentPosition'] == 'NULL'){
 								echo 'Click Here to add your education infomration';
 							}?>
 
-
+				</div>
 
 
 
@@ -134,10 +138,12 @@
 			    <div class="col-sm-1 portfolio-item">
 
             </div>
+
             <div class="col-md-6 portfolio-item" id="profile_sections">
-							<button type="button" class="editbutton" style="display: none;"></button>
-			<center><h3>Top skills</h3></center></br>
-			<div class="skillbar clearfix " data-percent="60%">
+							<div id="test">
+								<button type="button" class="editbutton" style="display: none;"></button>
+						<center><h3>Top skills</h3></center></br>
+				<div class="skillbar clearfix " data-percent="60%">
 				<div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
 				<div class="skillbar-bar" style="background: #e67e22;"></div>
 				<div class="skill-bar-percent">60%</div>
@@ -184,6 +190,7 @@
 
             </div>
         </div>
+			</div>
         <!-- /.row -->
     <?php }  ?>
     </div>
