@@ -1,5 +1,7 @@
 <?php
 	include 'inc/header.php';
+	include 'inc/functions.php';
+	include 'connect.php';
 ?>
 	<script>
 	jQuery(document).ready(function(){
@@ -9,15 +11,30 @@
 			},2000);
 		});
 	});
+	$(document).ready(function () {
+	                $(document).on('mouseenter', '#profile_header', function () {
+	                    $(this).find(":button").show();
+	                }).on('mouseleave', '#profile_header', function () {
+	                    $(this).find(":button").hide();
+	                });
+	            });
 	</script>
     <!-- Page Content -->
 	<div class="back">
     <div class="container back">
-
+		<?php
+		if ($_GET['id'] == $_SESSION['userid']){
+			$ownAccount = 'True';
+		}
+		$result = $conn->query("select * from users where user_id = ".$_GET['id']."");
+			while ($row = $result->fetch_assoc()) { ?>
 
         <!-- Pofile header image + info -->
-        
+
 		<div class="row" id="profile_header">
+
+   <button type="button" class="editbutton" style="display: none;"></button>
+
             <div class="col-md-">
 					<figure class="snip1344"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample1.jpg" alt="profile-sample1" class="background"/><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample1.jpg" alt="profile-sample1" class="profile"/>
 					  <figcaption>
@@ -29,93 +46,96 @@
 		<div class="row info">
           <div class="col-sm-4">
             <div class="row mgbt-xs-0 margin-top">
+              <label class="col-xs-5 control-label">Title:</label>
+              <div class="col-xs-7 controls"><?php echo $row['title'];?></div>
+              <!-- col-sm-10 -->
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="row mgbt-xs-0 margin-top">
               <label class="col-xs-5 control-label">First Name:</label>
-              <div class="col-xs-7 controls">Mariah</div>
-              <!-- col-sm-10 --> 
+              <div class="col-xs-7 controls"><?php echo $row['FirstName'];?></div>
+              <!-- col-sm-10 -->
             </div>
           </div>
           <div class="col-sm-4">
             <div class="row mgbt-xs-0 margin-top">
               <label class="col-xs-5 control-label">Last Name:</label>
-              <div class="col-xs-7 controls">Caraiban</div>
-              <!-- col-sm-10 --> 
+              <div class="col-xs-7 controls"><?php echo $row['LastName'];?></div>
+              <!-- col-sm-10 -->
             </div>
           </div>
           <div class="col-sm-4">
             <div class="row mgbt-xs-0 margin-top">
               <label class="col-xs-5 control-label">Email:</label>
-              <div class="col-xs-7 controls">mariah@Vendroid.com</div>
-              <!-- col-sm-10 --> 
+              <div class="col-xs-7 controls"><?php echo $row['Email'];?></div>
+              <!-- col-sm-10 -->
             </div>
           </div>
-          <div class="col-sm-4">
+					<?php  if (!$row['location'] == ''){?>
+					<div class="col-sm-4">
             <div class="row mgbt-xs-0 margin-top">
-              <label class="col-xs-5 control-label">City:</label>
-              <div class="col-xs-7 controls">Los Angeles</div>
-              <!-- col-sm-10 --> 
+              <label class="col-xs-5 control-label">location: </label>
+              <div class="col-xs-7 controls"><?php echo $row['location'];?></div>
+              <!-- col-sm-10 -->
             </div>
           </div>
-          <div class="col-sm-4">
-            <div class="row mgbt-xs-0 margin-top">
-              <label class="col-xs-5 control-label">Country:</label>
-              <div class="col-xs-7 controls">United States</div>
-              <!-- col-sm-10 --> 
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="row mgbt-xs-0 margin-top">
-              <label class="col-xs-5 control-label">Birthday:</label>
-              <div class="col-xs-7 controls">Jan 22, 1984</div>
-              <!-- col-sm-10 --> 
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="row mgbt-xs-0 margin-top">
-              <label class="col-xs-5 control-label">Interests:</label>
-              <div class="col-xs-7 controls">Basketball, Web, Design, etc.</div>
-              <!-- col-sm-10 --> 
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="row mgbt-xs-0 margin-top">
-              <label class="col-xs-5 control-label">Website:</label>
-              <div class="col-xs-7 controls"><a href="http://Vendroid.venmond.com">Vendroid.venmond.com</a></div>
-              <!-- col-sm-10 --> 
-            </div>
-          </div>
-          <div class="col-sm-5">
-            <div class="row mgbt-xs-0 margin-top">
-              <label class="col-xs-5 control-label">Phone:</label>
-              <div class="col-xs-7 controls">+1-234-5678</div>
-              <!-- col-sm-10 --> 
-            </div>
-          </div>
-        </div>
+					<?php }
+					if (!$row['DOB'] == ''){?>
+								<div class="col-sm-4">
+					        <div class="row mgbt-xs-0 margin-top">
+					          <label class="col-xs-5 control-label">DOB: </label>
+					          <div class="col-xs-7 controls"><?php echo $row['DOB'];?></div>
+					        </div>
+					      </div>
+					<?php }
+					if (!$row['Interests'] == ''){?>
+								<div class="col-sm-4">
+									<div class="row mgbt-xs-0 margin-top">
+										<label class="col-xs-5 control-label">Interests: </label>
+										<div class="col-xs-7 controls"><?php echo $row['Interests'];?></div>
+									</div>
+								</div>
+					<?php }
+					if (!$row['portfolio_url'] == ''){?>
+								<div class="col-sm-4">
+									<div class="row mgbt-xs-0 margin-top">
+										<label class="col-xs-5 control-label">Portfolio: </label>
+										<div class="col-xs-7 controls"><?php echo $row['portfolio_url'];?></div>
+									</div>
+								</div>
+					<?php } ?>
 
-          
-            
-	
-			
-			
-			
-            </div>
-        
-        
+
+        </div>
+			</div>
+
+
         <!-- /.row -->
 
         <!-- skill + education -->
         <div class="row">
             <div class="col-sm-5 portfolio-item" id="profile_sections">
-                <h2>eduction info</h2>
+							<button type="button" class="editbutton" style="display: none;"></button>
                 <h3>
-                    <a href="#">Project Three</a>
+                    Education Information
                 </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+							<?php if (!$row['CurrentPosition'] == 'NULL'){
+								echo 'Click Here to add your education infomration';
+							}?>
+
+
+
+
+
+
+
             </div>
 			    <div class="col-sm-1 portfolio-item">
 
             </div>
             <div class="col-md-6 portfolio-item" id="profile_sections">
+							<button type="button" class="editbutton" style="display: none;"></button>
 			<center><h3>Top skills</h3></center></br>
 			<div class="skillbar clearfix " data-percent="60%">
 				<div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
@@ -158,14 +178,14 @@
 				<div class="skillbar-bar" style="background: #4288d0;"></div>
 				<div class="skill-bar-percent">70%</div>
 			</div> <!-- End Skill Bar -->
-			
-			
-			
-                
+
+
+
+
             </div>
         </div>
         <!-- /.row -->
-
+    <?php }  ?>
     </div>
 	</div>
     <!-- /.container -->

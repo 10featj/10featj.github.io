@@ -3,7 +3,7 @@
 	session_start();
 ?>
 
-<html class="no-js"> 
+<html class="no-js">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,19 +23,19 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/fontello.css">
-        <link rel="stylesheet" href="css/animate.css">        
+        <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/owl.carousel.css">
         <link rel="stylesheet" href="css/owl.theme.css">
         <link rel="stylesheet" href="css/owl.transitions.css">
-        <link rel="stylesheet" href="css/style.css">		
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
 
-        <!-- Body content -->
-		
+       <!-- Body content -->
+
 
         <nav class="navbar navbar-default">
           <div class="container">
@@ -55,12 +55,13 @@
               <div class="button navbar-right">
 				<?php
 				if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+					$userid = $_SESSION['userid'];
 						echo'
-						
+
 						<div class="dropdown">
-						  <a href="profile.php"><button class="navbar-btn nav-button login" >Account</button></a>
+						  <a href="profile.php?id='.$userid.'"><button class="navbar-btn nav-button login" >Account</button></a>
 						  <div class="dropdown-content">
-							<a href="profile.php">My Account</a>
+							<a href="profile">My Account</a>
 							<a href="#">uplaod Cv</a>
 							<a href="savedjobs.php">Saved Jobs</a>
 						  </div>
@@ -68,7 +69,7 @@
 
 						<a href="logout.php"><button class="navbar-btn nav-button" >Logout</button></a>
 						';
-					}else{	
+					}else{
 						echo'<a href="#signin"><button class="navbar-btn nav-button login" >Login</button></a>
 							<a href="#register"><button class="navbar-btn nav-button" >Sign up</button></a>
 						';
@@ -87,12 +88,12 @@
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
-        </nav> 
-		
+        </nav>
 
-		
-			<!-- POP UP REG FORM -->	
-		
+
+
+			<!-- POP UP REG FORM -->
+
 <div id="register" class="modalDialog">
 	<div>
 	<div class="modalheader" ></div>
@@ -113,15 +114,15 @@
 			<input type="text" class="em reg" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email'];?>" placeholder="Email" required>
 			<input type="text" class="f reg" name="pass1" value="<?php if (isset($_POST['pass1'])) echo $_POST['pass1'];?>" placeholder="Password" required>
 			<input type="text" class="f reg" name="pass2" value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2'];?>" placeholder="Repeat Password" required></br>
-			<label class="terms">I Agree to <a href="#">Terms & Conditions</a>&nbsp;&nbsp;</label><input type="checkbox" name="terms" value="Y"> 
+			<label class="terms">I Agree to <a href="#">Terms & Conditions</a>&nbsp;&nbsp;</label><input type="checkbox" name="terms" value="Y">
 			<input type="submit" value="Register">
 		</form><a href="#close">
 	<button>Close</button></a>
 	</div>
 </div>
-		
+
 		<!-- POP UP signin FORM -->
-		
+
 <div id="signin" class="modalDialog">
 	<div>
 	<div class="modalheader" ></div>
@@ -129,11 +130,9 @@
 		<p>If you are a Recruiter please Sign in <a href="recsign.php">here</a>.</p>
 			<form action="login_action.php" method="POST">
 		<input type="text" class="em reg" name="email">
-		<input type="password" class="em reg" name="pass">	
+		<input type="password" class="em reg" name="pass">
 		<input type="submit" value="Login">
 	</form>
 	<a href="#close"><button>Close</button></a>
 	</div>
-</div>	
-		
-		
+</div>

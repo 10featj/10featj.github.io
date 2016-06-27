@@ -1,4 +1,4 @@
-CREATE DATABASE jobsite 
+CREATE DATABASE jobsite
 CREATE TABLE USERS
 (
 user_id INT(6) AUtO_INCREMENT,
@@ -9,6 +9,9 @@ Email varchar(100) NOT NULL,
 Password varchar(50) NOT NULL,
 CurrentPosition varchar(100),
 placeofeducation varchar(100),
+location varchar(100),
+DOB varchar(100),
+Interests varchar(250),
 ES_Result varchar(20),
 Course_Subject varchar(50),
 Course_lvl varchar(50),

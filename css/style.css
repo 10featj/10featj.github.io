@@ -1,6 +1,6 @@
 body{
 	font-family: 'Open Sans', sans-serif;
-	
+
 }
 
 .header-connect{
@@ -243,7 +243,7 @@ background-color: #CF6766;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
-.single-work.active{	
+.single-work.active{
 	background: #CF6766
 }
 .single-work.active h3{
@@ -338,7 +338,7 @@ background-color: #CF6766;
 }
 
 .tab-content ul.job-seeker li a .overlay{
-	
+
 }
 .tab-content ul.job-seeker li a .overlay h3 {
   bottom: -100px;
@@ -635,7 +635,7 @@ body {
 		transition: opacity 400ms ease-in;
 		pointer-events: none;
 	}
-	
+
 	.modalheader {
 		height:12px;
 		background: #CF6766;
@@ -644,7 +644,7 @@ body {
 		margin-right:-25px;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
-		
+
 	}
 
 	.modalDialog:target {
@@ -682,9 +682,9 @@ body {
 	}
 
 	.close:hover { background: #fff; }
-	
+
 	/* ---------- Reg Form----------- */
-	
+
  input[type="text"].reg, input[type="password"], input[type="email"], select, textarea {
     background-color: #fff;
     border-color: rgba(144, 144, 144, 0.25);
@@ -716,10 +716,10 @@ body {
 	  border: 2px solid #CF6766;
 	}
 
-select:focus 
+select:focus
 
 	/*  DROP DOWN */
-	
+
 /* Dropdown Button */
 .dropbtn {
     background-color: #4CAF50;
@@ -771,7 +771,7 @@ select:focus
 
 h3 {color:#999;text-align: center;}
 .info {
-	margin-top:5%;	
+	margin-top:5%;
 }
 .back {
 	background-color:#F5F5F5;
@@ -782,24 +782,25 @@ h3 {color:#999;text-align: center;}
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 	border-width: 0 0 4px 0;
-	border-color: #CF6766;	
+	border-color: #CF6766;
 	border-style: solid;
 	margin-bottom:20px;
 	margin-top:20px;
 	padding: 10px 10px 10px 10px
-} 
+}
 #profile_sections{
 	background-color: #fff;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 	border-width: 0 0 4px 0;
-	border-color: ;	
+	border-color: ;
 	border-style: solid;
 	margin-bottom:20px;
 	margin-top:20px;
 	padding: 10px 10px 10px 10px
-} 
+}
+
 .margin-top{margin-top:5%;}
 .snip1344 {
   font-family: 'Open Sans', Arial, sans-serif;
@@ -943,6 +944,20 @@ width:110px;
 	color:#ffffff;
 	color:rgba(0, 0, 0, 0.4);
 }
+ .editbutton{
+	background: url("../img/edit.png") no-repeat scroll 0 0 transparent;
+	width:30px;
+	height:30px;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	position:absolute;
+	z-index: 99;
+	background-size: 30px 30px;
+	box-shadow: 10px 10px 5px #888888;
+
+ }
 
 /* save buttons  NEED TO EDIT THEM TO NOT FIDDLE WITH OTHER BUTTONS WITHIN SITE.*/
 
@@ -952,20 +967,20 @@ width:110px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    
+
     border:1px solid #a6a6a6;
     border-top-color:#bdbdbd;
     border-bottom-color:#8b8a8b;
-    
+
     padding:9px 14px 9px;
-    
+
     color:#666666;
     font-size:11px;
     background-position:0px 0px;
-    
+
     text-shadow: 0 1px 0 #fff;
     font-weight:bold;
-    
+
     background-color: #ffffff;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e8e8e8)); /* Saf4+, Chrome */
     background-image: -webkit-linear-gradient(top, #ffffff, #e8e8e8); /* Chrome 10+, Saf5.1+, iOS 5+ */
@@ -973,12 +988,12 @@ width:110px;
     background-image:     -ms-linear-gradient(top, #ffffff, #e8e8e8); /* IE10 */
     background-image:      -o-linear-gradient(top, #ffffff, #e8e8e8); /* Opera 11.10+ */
     background-image:         linear-gradient(top, #ffffff, #e8e8e8);
-    
+
     -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
     box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-    
-    
+
+
 }
 
 .btn1:hover {
