@@ -12,18 +12,18 @@
 		});
 	});
 	$(document).ready(function () {
-	                $(document).on('mouseenter', '#test', function () {
-	                    $(this).find(".editbutton").show();
-	                }).on('mouseleave', '#test', function () {
-	                    $(this).find(".editbutton").hide();
-	                });
-	            });
+	  $(document).on('mouseenter', '#test', function () {
+	  	$(this).find(".editbutton").show();
+	  }).on('mouseleave', '#test', function () {
+	    $(this).find(".editbutton").hide();
+	  });
+	});
 	</script>
     <!-- Page Content -->
 	<div class="back">
     <div class="container back">
 			<div id="test">
-				<button type="button" class="editbutton" style="display: none;"></button>
+				<a href="#editbasicinfo"><button type="button" class="navbar-btn nav-button editbutton" style="display: none;"></button></a>
 		<?php
 		if ($_GET['id'] == $_SESSION['userid']){
 			$ownAccount = 'True';
@@ -120,7 +120,7 @@
         <div class="row">
           <div class="col-md-5 portfolio-item" id="profile_sections">
 						<div id="test">
-							<button type="button" class="editbutton" style="display: none;"></button>
+							<a href="#editeducation"><button type="button" class="navbar-btn nav-button editbutton" style="display: none;"></button></a>
 								<h3>
                     Education Information
                 </h3>
@@ -141,7 +141,7 @@
 
             <div class="col-md-6 portfolio-item" id="profile_sections">
 							<div id="test">
-								<button type="button" class="editbutton" style="display: none;"></button>
+								<a href="#editskillbars"><button type="button" class="navbar-btn nav-button editbutton" style="display: none;"></button></a>
 						<center><h3>Top skills</h3></center></br>
 				<div class="skillbar clearfix " data-percent="60%">
 				<div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
@@ -197,9 +197,46 @@
 	</div>
     <!-- /.container -->
 
+ <!-- POP_UPS -->
+	 <div id="editbasicinfo" class="modalDialog">
+	 	<div>
+	 	<div class="modalheader" ></div>
+	 	  <h1>Edit Basic Info</h1>
+	 		<p>If you are a Recruiter please Sign in <a href="recsign.php">here</a>.</p>
+	 			<form action="login_action.php" method="POST">
+	 		<input type="text" class="em reg" name="email">
+	 		<input type="password" class="em reg" name="pass">
+	 		<input type="submit" value="Login">
+	 	</form>
+	 	<a href="#close"><button>Close</button></a>
+	 	</div>
+	 </div>
 
-
-
+	 <div id="editeducation" class="modalDialog">
+	 	<div>
+	 	<div class="modalheader" ></div>
+	 	  <h1>Edit eduwef</h1>
+	 		<p>If you are a Recruiter please Sign in <a href="recsign.php">here</a>.</p>
+	 			<form action="login_action.php" method="POST">
+	 		<input type="text" class="em reg" name="email">
+	 		<input type="password" class="em reg" name="pass">
+	 		<input type="submit" value="Login">
+	 	</form>
+	 	<a href="#close"><button>Close</button></a>
+	 	</div>
+	 </div>
+	 <div id="editskillbars" class="modalDialog">
+	 	<div>
+	 	<div class="modalheader" ></div>
+	 	  <h1>EDIT SKILLBAR</h1>
+	 			<form action="login_action.php" method="POST">
+	 		<input type="text" class="em reg" name="email">
+	 		<input type="password" class="em reg" name="pass">
+	 		<input type="submit" value="Login">
+	 	</form>
+	 	<a href="#close"><button>Close</button></a>
+	 	</div>
+	 </div>
 <?php
 	include 'inc/footer.php';
 ?>

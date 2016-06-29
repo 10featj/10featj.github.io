@@ -12,9 +12,11 @@
         <meta name="author" content="Ohidul">
         <meta name="keyword" content="html, css, bootstrap, job-board">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+				<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+				<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -35,6 +37,8 @@
     <body>
 
        <!-- Body content -->
+
+
 
 
         <nav class="navbar navbar-default">
@@ -70,7 +74,7 @@
 						<a href="logout.php"><button class="navbar-btn nav-button" >Logout</button></a>
 						';
 					}else{
-						echo'<a href="#signin"><button class="navbar-btn nav-button login" >Login</button></a>
+						echo'<a href="#signin"><button type="button" class="btn btn-info btn-lg navbar-btn nav-button login" data-toggle="modal" data-target="#myModal">Login</button></a>
 							<a href="#register"><button class="navbar-btn nav-button" >Sign up</button></a>
 						';
 					}
@@ -122,17 +126,24 @@
 </div>
 
 		<!-- POP UP signin FORM -->
-
-<div id="signin" class="modalDialog">
-	<div>
-	<div class="modalheader" ></div>
-	  <h1>Sign in!</h1>
-		<p>If you are a Recruiter please Sign in <a href="recsign.php">here</a>.</p>
-			<form action="login_action.php" method="POST">
-		<input type="text" class="em reg" name="email">
-		<input type="password" class="em reg" name="pass">
-		<input type="submit" value="Login">
-	</form>
-	<a href="#close"><button>Close</button></a>
-	</div>
-</div>
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header modal-header-primary">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h1 class="modal-title">Sign In</h1>
+					</div>
+					<div class="modal-body">
+						 <p>If you are a Recruiter please Sign in <a href="recsign.php">here</a>.</p>
+							<form action="login_action.php" method="POST">
+								 <input type="text" class="em reg" name="email">
+								 <input type="password" class="em reg" name="pass">
+								 <input type="submit" value="Login">
+						 </form>
+					 </div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
